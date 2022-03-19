@@ -35,7 +35,7 @@ router.get('/coming-soon', (req, res) => {
         .then(data => {
 
             const commingSoon = data.items;
-            res.render('comming-soon', { newReleases: commingSoon });
+            res.render('coming-soon', { newReleases: commingSoon });
         })
         .catch(err => {
             throw err;
