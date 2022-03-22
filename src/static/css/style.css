@@ -1,0 +1,202 @@
+body {
+    background-color: rgb(49, 47, 47);
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation>ul>a {
+    font: 1em sans-serif;
+    font-size: 25px;
+    color: antiquewhite;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 250px;
+    height: 40px;
+}
+
+.top-20-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    row-gap: 30px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.top-20-tvSeries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    row-gap: 30px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.coming-soon-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    row-gap: 30px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.intheatres-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    row-gap: 30px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.searched-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    row-gap: 30px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.movie-partial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 35px;
+    grid-template-areas: 
+    "title  title  title"
+    "image image image"
+    "director director trailer";
+    width: 380px;
+    height: 500px;
+    background-color: beige;
+}
+
+.movie-title {
+    grid-area: title;
+    justify-self: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.movie-img {
+    grid-area: image;
+    justify-self: center;
+}
+
+.movie-img>img {
+    width: 350px;
+    height: 350px;
+}
+
+.movie-director {
+    grid-area: director;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.movie-trailer {
+    grid-area: trailer;
+    font: 1em sans-serif;
+    font-size: 20px;
+}
+
+.new-movies-partial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 35px;
+    grid-template-areas: 
+    "title  title  title"
+    "image image image"
+    "actors actors trailer";
+    width: 380px;
+    height: 500px;
+    background-color: beige;
+}
+
+.new-movies-title {
+    grid-area: title;
+    justify-self: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.new-movies-img {
+    grid-area: image;
+    justify-self: center;
+}
+
+.new-movies-img>img {
+    width: 350px;
+    height: 350px;
+}
+
+.new-movies-actors {
+    grid-area: actors;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.new-movies-trailer {
+    grid-area: trailer;
+    font: 1em sans-serif;
+    font-size: 20px;
+}
+
+.in-theatres-partial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 35px;
+    grid-template-areas: 
+    "title  title  title"
+    "image image image"
+    "actors actors trailer";
+    width: 380px;
+    height: 550px;
+    background-color: beige;
+}
+
+.in-theatres-title {
+    grid-area: title;
+    justify-self: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.in-theatres-img {
+    grid-area: image;
+    justify-self: center;
+}
+
+.in-theatres-img>img {
+    width: 350px;
+    height: 350px;
+}
+
+.in-theatres-actors {
+    grid-area: actors;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.in-theatres-trailer {
+    grid-area: trailer;
+    font: 1em sans-serif;
+    font-size: 20px;
+}
