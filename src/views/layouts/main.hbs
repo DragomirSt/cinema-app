@@ -3,21 +3,24 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Example App</title>
+    <title>{{title}}</title>
+    <link href="/css/style.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
-    <div>
-        <nav>
+    <header class="header">
+        <nav class="navigation">
             <ul>
-                <a href="/movies">20's Movies</a>
-                <a href="/tv-series">20's TV Series</a>
-                <a href="/coming-soon">Coming Soon</a>
+                <a href="/movies">20's Movies</a> |
+                <a href="/tv-series">20's TV Series</a> |
+                <a href="/coming-soon">Coming Soon</a> |
+                <a href="/watch-now">In Theatres</a> |
+                <a href="/search">Search</a> |
             </ul>
         </nav>
         {{{body}}}
 
-    </div>
+    </header>
 
 </body>
 
