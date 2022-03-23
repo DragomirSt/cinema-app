@@ -10,7 +10,8 @@ body {
 .navigation>ul>a {
     font: 1em sans-serif;
     font-size: 25px;
-    color: rgb(99, 97, 95);
+    color: #b9beb7;
+    margin: 5px;
 }
 
 .search-form {
@@ -84,13 +85,14 @@ body {
     "director director trailer";
     width: 380px;
     height: 550px;
-    background-color: beige;
+    background-color: #b9beb7;
 }
 
 .movie-title {
     grid-area: title;
     justify-self: center;
     margin-top: 10px;
+    font: 1em sans-serif;
     font-size: 20px;
 }
 
@@ -107,7 +109,8 @@ body {
 .movie-director {
     grid-area: director;
     margin-left: 10px;
-    font-size: 15px;
+    font: 1em sans-serif;
+    font-size: 16px;
 }
 
 .movie-trailer {
@@ -127,13 +130,14 @@ body {
     "actors actors trailer";
     width: 380px;
     height: 550px;
-    background-color: beige;
+    background-color: #b9beb7;
 }
 
 .new-movies-title {
     grid-area: title;
     justify-self: center;
     margin-top: 10px;
+    font: 1em sans-serif;
     font-size: 20px;
 }
 
@@ -150,7 +154,8 @@ body {
 .new-movies-actors {
     grid-area: actors;
     margin-left: 10px;
-    font-size: 15px;
+    font: 1em sans-serif;
+    font-size: 16px;
 }
 
 .new-movies-trailer {
@@ -170,13 +175,14 @@ body {
     "actors actors trailer";
     width: 380px;
     height: 550px;
-    background-color: beige;
+    background-color: #b9beb7;
 }
 
 .in-theatres-title {
     grid-area: title;
     justify-self: center;
     margin-top: 10px;
+    font: 1em sans-serif;
     font-size: 20px;
 }
 
@@ -193,7 +199,8 @@ body {
 .in-theatres-actors {
     grid-area: actors;
     margin-left: 10px;
-    font-size: 15px;
+    font: 1em sans-serif;
+    font-size: 16px;
 }
 
 .in-theatres-trailer {
@@ -205,17 +212,12 @@ body {
 :root {
     --gradient: linear-gradient(
         45deg,
-        #bdd8ce,
-        #95b4b3,
-        #b8c7c6,
-        #abb1a9,
-        #9aaa93
+        #797065,
+        #70614f
     );
 }
 
-.home-page {
-    height: 825px;
-    background-size: 100%;
-    background-image: url("../image/home-image.jpg");
-    
+.home-page>img {
+    max-width: 100%;
+    height: auto;  
 }
