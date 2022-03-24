@@ -12,7 +12,7 @@ router.get('/movies', (req, res) => {
             res.render('top-20-movies', { title: 'Top 20s Movies', movie: movies });
         })
         .catch(err => {
-            throw err;
+            res.status('503').render('503');
         });
 });
 
@@ -25,7 +25,7 @@ router.get('/tv-series', (req, res) => {
             res.render('top-20-tv-series', { title: 'Top 20s TV Series', tvSeries: tvSeries });
         })
         .catch(err => {
-            throw err;
+            res.status('503').render('503');
         });
 });
 
@@ -38,7 +38,7 @@ router.get('/coming-soon', (req, res) => {
             res.render('coming-soon', { title: 'Coming Soon', newReleases: commingSoon });
         })
         .catch(err => {
-            throw err;
+            res.status('503').render('503');
         });
 });
 
@@ -51,7 +51,7 @@ router.get('/watch-now', (req, res) => {
             res.render('watch-now', { title: 'In Theatres', watchNow: inTheaters });
         })
         .catch(err => {
-            throw err;
+            res.status('503').render('503');
         });
 });
 
@@ -62,7 +62,7 @@ router.get('/trailer/:id', (req, res) => {
             res.redirect(trailer.link);
         })
         .catch(err => {
-            throw err;
+            res.status('503').render('503');
         });
 });
 
@@ -72,11 +72,12 @@ router.get('/search', (req, res) => {
             .then(res => res.json())
             .then(movie => {
 
-                const searchResults = movie.results;
-                res.render('search', { title: 'Search IMDB', results: searchResults });
+                const searchResult = movie.results[0];
+                const errorMessage = 'Could not find your movie, try again.';
+                res.render('search', { title: 'Search IMDB', result: searchResult, error: errorMessage });
             })
             .catch(err => {
-                throw err;
+                res.status('503').render('503');
             });
     } else {
         res.render('search');
