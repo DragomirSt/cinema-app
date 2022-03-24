@@ -68,7 +68,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    grid-gap: 35px;
+    grid-gap: 20px;
     grid-template-areas: 
     "title  title  title"
     "image image image"
@@ -113,7 +113,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    grid-gap: 35px;
+    grid-gap: 20px;
     grid-template-areas: 
     "title  title  title"
     "image image image"
@@ -156,13 +156,14 @@ body {
 
 .in-theatres-partial {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 35px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
     grid-template-areas: 
-    "title  title  title"
-    "image image image"
-    "actors actors trailer";
+    "title  title  title title"
+    "realease realease realease realease"
+    "image image image image"
+    "actors actors actors trailer";
     width: 380px;
     height: 550px;
     background-color: #b9beb7;
@@ -174,6 +175,13 @@ body {
     margin-top: 10px;
     font: 1em sans-serif;
     font-size: 20px;
+}
+
+.realease-date {
+    grid-area: realease;
+    justify-self: center;
+    font: 1em sans-serif;
+    font-size: 17px;
 }
 
 .in-theatres-img {
@@ -191,6 +199,7 @@ body {
     margin-left: 10px;
     font: 1em sans-serif;
     font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .in-theatres-trailer {
@@ -204,7 +213,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     justify-self: center;
-    grid-gap: 35px;
+    grid-gap: 20px;
     grid-template-areas: 
     "title  title  title"
     "image image image"
