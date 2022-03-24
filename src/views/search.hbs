@@ -1,9 +1,23 @@
 <form class="search-form" action="/search" method="GET">
-    <input class="search-input" type="search" name="text" placeholder="Search through IMDB...">
+    <input class="search-input" type="search" name="text" placeholder="Search through IMDB Titles...">
     <button class="search-button" type="submit">Search</button>
 </form>
-<div class="searched-movies">
-    {{#each results}}
-    {{> movies}}
-    {{/each}}
+{{#if result}}
+<div class="search-div-result">
+    <div class="searched-movies">
+        <div class="search-movie-title">
+            {{result.title}}
+        </div>
+        <div class="search-movie-img">
+            <img src="{{result.image}}">
+        </div>
+        <div class="search-movie-trailer">
+            <a href="/trailer/{{result.id}}">Trailer</a>
+        </div>
+    </div>
 </div>
+{{else}}
+<div class="error-message">
+    <h2>{{error}}</h2>
+</div>
+{{/if}}
