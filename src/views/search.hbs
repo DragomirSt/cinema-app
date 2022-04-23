@@ -3,18 +3,10 @@
     <button class="search-button" type="submit">Search</button>
 </form>
 {{#if result}}
-<div class="search-div-result">
-    <div class="searched-movies">
-        <div class="search-movie-title">
-            {{result.title}}
-        </div>
-        <div class="search-movie-img">
-            <img src="{{result.image}}">
-        </div>
-        <div class="search-movie-plot">
-            <a href="/movie-plot/{{result.id}}">Plot</a>
-        </div>
-    </div>
+<div class="results-container">
+    {{#each result}}
+    {{> search-result}}
+    {{/each}}
 </div>
 {{else}}
 <div class="error-message">
